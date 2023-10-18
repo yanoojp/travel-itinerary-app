@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A62301D2AE0A222000E40EB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1A62301C2AE0A222000E40EB /* FirebaseAuth */; };
+		1A62301F2AE0A222000E40EB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1A62301E2AE0A222000E40EB /* FirebaseFirestore */; };
 		1AB6D8712AD8D48A001C10FE /* travel_itinerary_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6D8702AD8D48A001C10FE /* travel_itinerary_appApp.swift */; };
 		1AB6D8732AD8D48A001C10FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6D8722AD8D48A001C10FE /* ContentView.swift */; };
 		1AB6D8752AD8D48F001C10FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6D8742AD8D48F001C10FE /* Assets.xcassets */; };
@@ -21,7 +23,6 @@
 		1AB6D8A52ADCB083001C10FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6D8A42ADCB082001C10FE /* GoogleService-Info.plist */; };
 		1AB6D8A62ADCB083001C10FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6D8A42ADCB082001C10FE /* GoogleService-Info.plist */; };
 		1AB6D8A72ADCB083001C10FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AB6D8A42ADCB082001C10FE /* GoogleService-Info.plist */; };
-		1AB6D8AA2ADCB285001C10FE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1AB6D8A92ADCB285001C10FE /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AB6D8AA2ADCB285001C10FE /* FirebaseAnalytics in Frameworks */,
+				1A62301D2AE0A222000E40EB /* FirebaseAuth in Frameworks */,
+				1A62301F2AE0A222000E40EB /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +181,8 @@
 			);
 			name = "travel-itinerary-app";
 			packageProductDependencies = (
-				1AB6D8A92ADCB285001C10FE /* FirebaseAnalytics */,
+				1A62301C2AE0A222000E40EB /* FirebaseAuth */,
+				1A62301E2AE0A222000E40EB /* FirebaseFirestore */,
 			);
 			productName = "travel-itinerary-app";
 			productReference = 1AB6D86D2AD8D48A001C10FE /* travel-itinerary-app.app */;
@@ -254,7 +257,7 @@
 			);
 			mainGroup = 1AB6D8642AD8D48A001C10FE;
 			packageReferences = (
-				1AB6D8A82ADCB285001C10FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1A62301B2AE0A222000E40EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 1AB6D86E2AD8D48A001C10FE /* Products */;
 			projectDirPath = "";
@@ -627,7 +630,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1AB6D8A82ADCB285001C10FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		1A62301B2AE0A222000E40EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -638,10 +641,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1AB6D8A92ADCB285001C10FE /* FirebaseAnalytics */ = {
+		1A62301C2AE0A222000E40EB /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1AB6D8A82ADCB285001C10FE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
+			package = 1A62301B2AE0A222000E40EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1A62301E2AE0A222000E40EB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A62301B2AE0A222000E40EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
