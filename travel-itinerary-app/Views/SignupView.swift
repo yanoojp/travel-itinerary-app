@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAuth
 
 struct SignupView: View {
     @State var email: String = ""
@@ -21,7 +22,13 @@ struct SignupView: View {
                 .cornerRadius(8)
             
             Button("Signup") {
-                self.navigateToHome = true
+                Auth.auth().createUser(withEmail: email, password: password) { authDataResult, error in
+                    if let error = error {
+                        print("Error signing up: \(error.localizedDescription)")
+                    } else {
+                        self.navigateToHome = true
+                    }
+                }
             }
             .fullScreenCover(isPresented: $navigateToHome, content: {
                 HomeView()
