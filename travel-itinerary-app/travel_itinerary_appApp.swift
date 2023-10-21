@@ -24,7 +24,7 @@ struct travel_itinerary_appApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

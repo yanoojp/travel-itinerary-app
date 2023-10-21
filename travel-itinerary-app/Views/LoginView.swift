@@ -13,10 +13,16 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var navigateToHome = false
-
+    @State private var navigateToSignup = false
+    
     var body: some View {
         VStack {
             TextField("Email", text: $email)
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(8)
+            
+            SecureField("Password", text: $password)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
@@ -33,9 +39,12 @@ struct LoginView: View {
                 HomeView()
             })
             
-            NavigationLink(destination: SignupView()) {
-                Text("Don't have an account? Sign Up")
+            Button("Don't have an account? Sign Up") {
+                self.navigateToSignup = true
             }
+            .fullScreenCover(isPresented: $navigateToSignup, content: {
+                SignupView()
+            })
             .padding(.top, 20)
         }
         .padding()
